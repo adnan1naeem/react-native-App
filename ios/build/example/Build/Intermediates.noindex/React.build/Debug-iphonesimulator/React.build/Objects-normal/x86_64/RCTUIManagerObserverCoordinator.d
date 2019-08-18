@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Modules/RCTUIManagerObserverCoordinator.mm \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Modules/RCTUIManagerObserverCoordinator.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGValue.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Modules/RCTUIManager.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/React/Base/RCTRootView.h

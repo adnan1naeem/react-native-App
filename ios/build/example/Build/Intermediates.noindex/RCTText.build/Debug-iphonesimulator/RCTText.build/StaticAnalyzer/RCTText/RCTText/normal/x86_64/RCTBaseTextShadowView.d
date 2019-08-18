@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.m \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/BaseText/RCTBaseTextShadowView.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTLayout.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/yoga/YGValue.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/RCTTextAttributes.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/RCTTextTransform.h \
+  /Users/harisramzan/Desktop/app/ios/build/example/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView+Layout.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/RawText/RCTRawTextShadowView.h \
+  /Users/harisramzan/Desktop/app/node_modules/react-native/Libraries/Text/VirtualText/RCTVirtualTextShadowView.h

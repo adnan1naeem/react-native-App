@@ -1,64 +1,104 @@
-import * as Font from 'expo-font';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
 
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import React, { useState } from 'react';
+import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { Component } from 'react';
 
-import { AppLoading } from 'expo';
-import AppNavigator from './navigation/AppNavigator';
-import { Asset } from 'expo-asset';
-import { Ionicons } from '@expo/vector-icons';
+import NotifService from './service';
+import appConfig from './app.json';
 
-export default App = (props) => {
-  const [isLoadingComplete, setLoadingComplete] = useState(false);
+type Props = {};
+export default class App extends Component {
 
-  if (!isLoadingComplete && !props.skipLoadingScreen) {
-    return (
-      <AppLoading
-        startAsync={loadResourcesAsync}
-        onError={handleLoadingError}
-        onFinish={() => handleFinishLoading(setLoadingComplete)}
-      />
-    );
-  } else {
+  constructor(props) {
+    super(props);
+    this.state = {
+      senderId: appConfig.senderID
+    };
+
+    this.notif = new NotifService(this.onRegister.bind(this), this.onNotif.bind(this));
+  }
+
+  render() {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <AppNavigator />
+        <Text style={styles.title}>Example app react-native-push-notification</Text>
+        <View style={styles.spacer}></View>
+        <TextInput style={styles.textField} value={this.state.registerToken} placeholder="Register token" />
+        <View style={styles.spacer}></View>
+
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.localNotif() }}><Text>Local Notification (now)</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.scheduleNotif() }}><Text>Schedule Notification in 30s</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.cancelNotif() }}><Text>Cancel last notification (if any)</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.cancelAll() }}><Text>Cancel all notifications</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.checkPermission(this.handlePerm.bind(this)) }}><Text>Check Permission</Text></TouchableOpacity>
+
+        <View style={styles.spacer}></View>
+        <TextInput style={styles.textField} value={this.state.senderId} onChangeText={(e) => { this.setState({ senderId: e }) }} placeholder="GCM ID" />
+        <TouchableOpacity style={styles.button} onPress={() => { this.notif.configure(this.onRegister.bind(this), this.onNotif.bind(this), this.state.senderId) }}><Text>Configure Sender ID</Text></TouchableOpacity>
+        {this.state.gcmRegistered && <Text>GCM Configured !</Text>}
+
+        <View style={styles.spacer}></View>
       </View>
     );
   }
+
+  onRegister(token) {
+    Alert.alert("Registered !", JSON.stringify(token));
+    console.log(token);
+    this.setState({ registerToken: token.token, gcmRegistered: true });
+  }
+
+  onNotif(notif) {
+    console.log(notif);
+    Alert.alert(notif.title, notif.message);
+  }
+
+  handlePerm(perms) {
+    Alert.alert("Permissions", JSON.stringify(perms));
+  }
 }
 
-async function loadResourcesAsync() {
-  await Promise.all([
-    Asset.loadAsync([
-      require('./assets/images/robot-dev.png'),
-      require('./assets/images/robot-prod.png'),
-    ]),
-    Font.loadAsync({
-      // This is the font that we are using for our tab bar
-      ...Ionicons.font,
-      // We include SpaceMono because we use it in HomeScreen.js. Feel free to
-      // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
-    }),
-  ]);
-}
-
-function handleLoadingError(error) {
-  // In this case, you might want to report the error to your error reporting
-  // service, for example Sentry
-  console.warn(error);
-}
-
-function handleFinishLoading(setLoadingComplete) {
-  setLoadingComplete(true);
-}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  button: {
+    borderWidth: 1,
+    borderColor: "#000000",
+    margin: 5,
+    padding: 5,
+    width: "70%",
+    backgroundColor: "#DDDDDD",
+    borderRadius: 5,
+  },
+  textField: {
+    borderWidth: 1,
+    borderColor: "#AAAAAA",
+    margin: 5,
+    padding: 5,
+    width: "70%"
+  },
+  spacer: {
+    height: 10,
+  },
+  title: {
+    fontWeight: "bold",
+    fontSize: 20,
+    textAlign: "center",
+  }
 });
-
